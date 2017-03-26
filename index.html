@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh" ng-app="MyApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="恒星教程,Stellar教程,恒星币教程,XLM教程,恒星中国教程,恒星币中国教程,恒星币充值提现教程" />
+  <meta name="description" content="恒星教程，恒星币教程，介绍如何创建恒星钱包，激活钱包，恒星充值，提现，交易。以及Stellar入门的各种基本功能和技巧">
+  <meta name="author" content="瑞狐网关">
+	
+  <title>恒星教程|Stellar教程</title>
+  
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/rdash.min.css">
+  <link rel="stylesheet" type="text/css" href="css/prettify.css">
+
+  <script type="text/javascript" src="https://cdn.bootcss.com/angular.js/1.2.29/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/angular.js/1.2.29/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
+
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script type="text/javascript" src="js/directives.js"></script>
+  <script type="text/javascript" src="js/controllers/alert-ctrl.js"></script>
+  <script type="text/javascript" src="js/controllers/master-ctrl.js"></script>
+  
+</head>
+<body ng-controller="MasterCtrl">
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar">
+        <li class="sidebar-main">
+          <a ng-click="toggleSidebar()">
+          	恒星教程
+            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+          </a>
+        </li>
+        <li class="sidebar-title"><span>基础导航</span></li>
+        <li class="sidebar-list">
+          <a href="#/create">创建钱包 <span class="menu-icon fa fa-credit-card"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/trust">信任网关 <span class="menu-icon fa fa-chain"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/taobao">充值 <span class="menu-icon fa fa-download"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/withdraw">提现<span class="menu-icon fa fa-upload"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/trade">交易<span class="menu-icon fa fa-exchange"></span></a>
+        </li>
+        
+        <li class="sidebar-title"><span>进阶教程</span></li>
+        <li class="sidebar-list">
+          <a href="#/github">技术开发<span class="menu-icon fa fa-github "></span></a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="col-xs-6">
+          <a href="http://download.ripplefox.com" target="_blank">
+			下载钱包
+          </a>
+        </div>
+        <div class="col-xs-6">
+          <a href="https://shop109149722.taobao.com" target="_blank">
+          	淘宝充值
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+
+        <!-- Header Bar -->
+        <div class="row header">
+          <div class="col-xs-12">
+            <div class="user pull-right">
+              <div class="item dropdown">
+                <a href="#" class="dropdown-toggle">
+                  <img src="img/logo.png">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class="link">
+                    <a href="#">恒星教程首页</a>
+                  </li>
+                  <li class="link">
+                    <a href="http://download.ripplefox.com">离线钱包下载</a>
+                  </li>
+                  <li class="link">
+                    <a href="https://ripplefox.taobao.com">淘宝充值页面</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="link"><a href="https://ripplefox.com">瑞狐主站</a></li>
+                  <li class="link"><a href="http://cn.ripplefox.com">中文导航</a></li>
+                  <li class="link"><a><span class="menu-icon fa fa-qq"> QQ群 566413562</a></li>
+                </ul>
+              </div>
+              
+            </div>
+            <div class="meta">
+              <div class="page">
+				最新最详细的恒星教程
+              </div>
+              <div class="breadcrumb-links">
+              	由瑞狐网关提供
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view autoscroll="false"></div>
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+</body>
+</html>
