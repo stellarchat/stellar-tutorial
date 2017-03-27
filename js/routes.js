@@ -28,6 +28,9 @@ angular.module('MyApp').config(['$stateProvider', '$urlRouterProvider',
 			}).state('trade', {
 				url : '/trade',
 				templateUrl : 'templates/trade.html'
+			}).state('tech', {
+				url : '/tech',
+				templateUrl : 'templates/tech.html'
 			});
     }
 ]);
